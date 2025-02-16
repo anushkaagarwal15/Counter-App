@@ -1,18 +1,23 @@
-import React from 'react'
+import React, {useState} from 'react'
+import './Counter.css'
 
-const Counter = () => {
+function Counter() {
+
+    const [count, setCount] = useState(0)
+
+
   return (
-    <div>
+    <div className='container'>
         <h1>Counter</h1>
-        <div>
+        <div className='display'>
             <span>{count}</span>
         </div>
         
         {/* buttons are content inside the div */}
-        <div>
-            <button>+</button>
-            <button>-</button>
-            <button>Reset</button>
+        <div className='button-group'>
+            <button className='button increment' onClick={() => setCount(count+1)}>+</button>
+            <button className='button decrement' onClick={() => setCount(count-1)}>-</button>
+            <button className='button reset' onClick={() => setCount(0)}>Reset</button>
 
 
         </div>

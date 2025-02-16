@@ -1,9 +1,10 @@
 import React from "react";
-import Counter from "multer/lib/counter";
+import Counter from "./Counter";
+
 function App() {
   return (
     <>
-    
+    <Counter/>
     </>
   );
 }
